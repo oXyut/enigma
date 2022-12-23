@@ -109,24 +109,21 @@ class EnigmaMachine:
         self.turnover = Turnover(self.turnover.seed)
         self.counter.reset()
 
+
 if __name__ == "__main__":
     print("=== Welcome to Enigma Machine! ===")
     print("Please input a seed number.")
     seed = int(input())
     enigma = EnigmaMachine(seed)
-    print("\nPlease select an operation.")
-    print("1: Encode/Decode a text")
-    print("2: Reset the machine")
-    print("3: Exit")
     while True:
+        print("\nPlease select an operation.")
+        print("1: Encode/Decode a text")
+        print("2: Reset the machine")
+        print("3: Exit")
         try:
             operation = int(input())
         except:
-            print("Invalid operation!")
-            print("\nPlease select an operation.")
-            print("1: Encode/Decode a text")
-            print("2: Reset the machine")
-            print("3: Exit")
+            print("### Invalid operation! ###")
             continue
         if operation == 1:
             print("Please input a text.")
@@ -138,8 +135,4 @@ if __name__ == "__main__":
             print("=== Thank you for using Enigma Machine! ===")
             break
         else:
-            print("Invalid operation.")
-        print("\nPlease select an operation.")
-        print("1: Encode/Decode a text")
-        print("2: Reset the machine")
-        print("3: Exit")
+            print("### Invalid operation! ###")
